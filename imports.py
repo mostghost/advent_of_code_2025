@@ -31,3 +31,15 @@ def daytwo(test_mode=False):
             ranges = [(int(y[0]), int(y[1])) for y in ranges]
 
     return ranges
+
+
+def daythree(test_mode=False):
+
+    test = check_testmode(test_mode)
+    banks = []
+
+    with open(f"daythree/input{test}.txt", "r") as fh:
+        for line in fh:
+            banks.append(line.strip())
+
+    return banks
