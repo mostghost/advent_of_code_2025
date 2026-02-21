@@ -1,11 +1,6 @@
-instructions = []
+import imports as imp
 
-with open('dayone/input.txt', 'r') as fh:
-    for line in fh:
-        instructions.append((line[0], line[1:].strip()))
-
-print(instructions)
-
+instructions = imp.dayone()
 dial = 50
 zero_count = 0
 
