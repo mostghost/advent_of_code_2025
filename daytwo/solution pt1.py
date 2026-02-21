@@ -1,11 +1,6 @@
-ranges = []
+import imports as imp
 
-with open("daytwo/input.txt", "r") as fh:
-    for line in fh:
-        ranges = line.split(",")
-        ranges = [x.split("-") for x in ranges]
-        ranges = [(int(y[0]), int(y[1])) for y in ranges]
-
+ranges = imp.daytwo()
 invalids = []
 
 for span in ranges:
