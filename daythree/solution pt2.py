@@ -40,7 +40,7 @@ def candidate_finder(iter, bank):
 for bank in banks:
     joltage = ""
     for i in range(1, 13):
-        biggest, bank = candidate_finder(i, bank)
+        biggest, bank = candidate_finder(i, bank)  # type: ignore
 
         joltage += biggest
 
