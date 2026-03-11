@@ -43,3 +43,15 @@ def daythree(test_mode=False):
             banks.append(line.strip())
 
     return banks
+
+
+def dayfour(test_mode=False):
+
+    test = check_testmode(test_mode)
+    map = []
+
+    with open(f"dayfour/input{test}.txt", "r") as fh:
+        for line in fh:
+            map.append(line.strip())
+
+    return map
