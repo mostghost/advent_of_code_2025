@@ -55,3 +55,29 @@ def dayfour(test_mode=False):
             map.append(line.strip())
 
     return map
+
+
+def dayfive(test_mode=False):
+
+    test = check_testmode(test_mode)
+    ids = []
+    ingredients = []
+
+    with open(f"dayfive/input{test}.txt", "r") as fh:
+        halfway_point = False
+
+        for line in fh:
+
+            if halfway_point:
+                ingredients.append(int(line.strip()))
+                continue
+
+            while line != "\n":
+                id_range = tuple([int(x) for x in line.strip().split("-")])
+                ids.append(id_range)
+                break
+            else:
+                halfway_point = True
+                continue
+
+    return ids, ingredients
